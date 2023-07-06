@@ -1,0 +1,3 @@
+The list below is updated continuously by Jeffrey Sonnenfeld and his team of experts, research fellows, and students at the Yale Chief Executive Leadership Institute to reflect new announcements from companies in as close to real time as possible.
+
+Over 1,000 companies have publicly announced they are voluntarily curtailing operations in Russia to some degree beyond the bare minimum legally required by international sanctions — but some companies have continued to operate in Russia undeterred.
