@@ -219,3 +219,5 @@ plt.ylim([0, 80])
 ## Conclusions
 
 ### This analysis suggests that geopolitics correlate closer to a company's decisions about its Russian market following the invasion of Ukraine than does the type of industry.  
+
+# Way forward: add code from stretch_goals notebook to ReadMe File
