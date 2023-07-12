@@ -216,8 +216,42 @@ plt.ylim([0, 80])
 
 ### Comparing companies by country of origin shows inverted results when juxtaposing "A" and "F" grades with 60% of Finnish companies receiving "A" and less than 5% of Chinese companies receiving "A" whereas 0% of Finnish companies received an "F" and nearly 80% of Chinese companies received an "F". 
 
+## Additional Visualization
+
+### To further elucidate some of the findings I wanted to create a chart which showed which the number of companies that each country has in Russia.  I've decided to break this apart by industry in a stack chart as a proof of concept for my own capabilities.  
+
+### I wanted to keep the order of countries consistent with the previous two charts for readability.  Together I believe that this helps "tell the story" of my findings and presents the honest caveat that, while we are talking about a relatively small number of companies which receive an "F", that this number is still revealing given the countries which similar numbers of companies and their received grades.
+
+top_countries = country_counts.head(10).index.tolist()
+
+focused_data = country_data[country_data['Country'].isin(top_countries)]
+
+### This code groups countries and produces a count of how many companies there are in each industry.
+
+country_industries = focused_data.groupby('Country')['Industry'].value_counts()
+
+### Count of Industries by Country
+
+plt.figure(figsize=(12, 6))
+sns.set_palette("crest")
+stacked_data.plot(kind='bar', stacked=True)
+plt.title('Count of Industries by Country')
+plt.xlabel('Country')
+plt.ylabel('Count of Industries')
+plt.xticks(rotation=45)
+plt.legend(title='Industry', prop={'size': 8})
+
+plt.show()
+
+### My chosen colorscheme "crest" looks good with my chosen powerpoint presentation but is probably not very colorblind-friendly.  I am at peace with this because it is a proof of concept for my own ability and not essential to the meaning of my presentation.
+
 ## Conclusions
 
 ### This analysis suggests that geopolitics correlate closer to a company's decisions about its Russian market following the invasion of Ukraine than does the type of industry.  
 
-# Way forward: add code from stretch_goals notebook to ReadMe File
+### Current geopolitical signals reflect my findings in the data.  China received the most F grades for its companies which is supported by President Xi's claims of a "no limits" partnership with Russia.  Additionally, the second nation with the highest percentage of F grades, France, recently met with President Xi and spoke about the importance of not getting caught up in crises that are not [France's].  
+
+### China has a similar number of companies as Finland and the Netherlands, but both have 0 companies which received an F grade.
+
+### Caveat: It would take additional evaluation of the data itself to see how well the researchers have accounted for all nations and all companies in Russia.  Perhaps there was deliberate or accidental under/over counting of companies which distort the numbers, and this would be easy to do given the relatively small sample size.  
+
