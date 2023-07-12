@@ -247,11 +247,15 @@ plt.show()
 
 ## Conclusions
 
-### This analysis suggests that geopolitics correlate closer to a company's decisions about its Russian market following the invasion of Ukraine than does the type of industry.  
+### This analysis suggests that geopolitics correlate closer to a company's decisions about its Russian market following the invasion of Ukraine than does the type of industry.  China is the outlier with a large number of companies in Russia which are maintaining operations since the invasion.  
 
 ### Current geopolitical signals reflect my findings in the data.  China received the most F grades for its companies which is supported by President Xi's claims of a "no limits" partnership with Russia.  Additionally, the second nation with the highest percentage of F grades, France, recently met with President Xi and spoke about the importance of not getting caught up in crises that are not [France's].  
 
 ### China has a similar number of companies as Finland and the Netherlands, but both have 0 companies which received an F grade.
 
 ### Caveat: It would take additional evaluation of the data itself to see how well the researchers have accounted for all nations and all companies in Russia.  Perhaps there was deliberate or accidental under/over counting of companies which distort the numbers, and this would be easy to do given the relatively small sample size.  
+
+### A future research opportunity exists in measuring only companies that are state owned enterprises.
+
+### A future research opportunity exists in identifying countries in the "global south" to see how they perform versus EU or NATO member countries.  
 

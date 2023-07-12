@@ -1,6 +1,0 @@
-Proposal:
-1.  What types of companies or industries have chosen to leave or stay?  Is there a pattern of a type of company that could be isolated for treatment in sanctions regimes in future targeting packages to promote deterence for armed conflicts.  I hypothesize that certain industries have enough sunk costs in company infrastructure that divestment is not feasible for the longterm interests of the company.  However, service based companies likely have an easier time divesting from their Russian assets.
-
-2.  All of this data is organized by strings with companies assigned a letter grade corresponding to a description of actions the company has taken since the invasion into Ukraine.  These descriptions may be used anecdotally, but the letter grade and the industry designator can be statistically parsed to identify meaningful insights.
-
-3.  MVP is to have a chart which stratifies industries according to their assigned letter grade.  An MVP+ goal would be to sort this data according to country to see if the country of origin for the country has a bigger impact on a company's decision to divest than does the relevant industry.
