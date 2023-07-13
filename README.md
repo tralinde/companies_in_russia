@@ -81,9 +81,24 @@ custom_order = ['Industrials', 'Consumer Discretionary', 'Information Technology
 
 industry_percent_F_sorted = industry_percent_F.sort_values(key=lambda x: x.index.map(lambda y: custom_order.index(y)), ascending=True)
 
-
-
 ## Visualizations:
+
+### As a late addition I created a visualization to display the total number of companies broken down by industry in a pie chart
+
+y = np.array([industry_counts])
+
+labels = industry_counts.index
+counts = industry_counts.values
+plt.figure(figsize=(8,8))
+plt.pie(counts, labels=labels, autopct='%1.1f%%')
+plt.title('Distribution of Companies by Industry', fontsize = 20)
+
+plt.show()
+
+
+![Alt text](<Pie, Companies by Industry, all.png>)
+
+### This was too much data to work with and communicate seamlessly so I condensed my focus to the six biggest industries.
 
 ### Top six industries by percentage
 top_six_percentages.plot(kind='bar')
@@ -91,6 +106,8 @@ top_six_percentages.plot(kind='bar')
 plt. title('Percent Share of Foreign Owned Industries in Russia')
 plt.xlabel('Type of Industry')
 plt.ylabel('Percentage of Total')
+
+![Alt text](image-1.png)
 
 ### Percentage receiving grade "A"
 
@@ -104,6 +121,8 @@ plt.xticks(rotation=45)
 
 plt.ylim([0, 12])
 
+![Alt text](image-2.png)
+
 ### Percentage receiving grade "F"
 
 industry_percent_F_sorted.plot(kind='bar')
@@ -115,6 +134,8 @@ plt.ylabel(None)
 plt.xticks(rotation=45)
 
 plt.ylim([0, 12])
+
+![Alt text](image-3.png)
 
 ### I found that industry comparison delivered inconclusive results.  I then switched to a comparison based upon the country in which companies are headquarted to explore the hypothesis that geopolitics may demonstrate a closer correlation with companies' operations in Russia.
 
@@ -180,13 +201,29 @@ country_percent_F_sorted = country_percent_F.sort_values(key=lambda x: x.index.m
 
 ## Visualizations:
 
-### Percentage of Foreign Owned Companies in Russia:
+### At a late addition I created a pie chart to show each country as a percentage of all companies in Russia.  I will use this as a starting point to contextualize the number of companies by country.
+
+y = np.array([country_counts])
+
+labels = country_counts.index
+counts = country_counts.values
+plt.figure(figsize=(8,8))
+plt.pie(counts, labels=labels, autopct='%1.1f%%')
+plt.title(None)
+
+plt.show()
+
+![Alt text](image-4.png)
+
+### Percentage of Foreign Owned Companies in Russia by top 10:
 
 top_countries_percentage.plot(kind='bar')
 
 plt. title('Percent Share of Foreign Owned Companies in Russia')
 plt.xlabel('Country of Origin')
 plt.ylabel('Percentage of Total')
+
+![Alt text](image-5.png)
 
 ### Grade A Country Comparison
 
@@ -200,6 +237,8 @@ plt.xticks(rotation=45)
 
 plt.ylim([0, 80])
 
+![Alt text](image-6.png)
+
 ### Grade F Country Comparison
 
 country_percent_F_sorted.plot(kind='bar')
@@ -211,6 +250,8 @@ plt.ylabel(None)
 plt.xticks(rotation=45)
 
 plt.ylim([0, 80])
+
+![Alt text](image-7.png)
 
 ## Findings
 
@@ -259,3 +300,6 @@ plt.show()
 
 ### A future research opportunity exists in identifying countries in the "global south" to see how they perform versus EU or NATO member countries.  
 
+
+
+[def]: image.png

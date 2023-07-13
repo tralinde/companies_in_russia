@@ -31,6 +31,18 @@ plt.title('Percent Share of Foreign Companies in Russia')
 plt.xlabel('Type of Industry')
 plt.ylabel('Percentage of Total')
 
+# I created a pie chart to show the percentage of all industries:
+
+y = np.array([industry_counts])
+
+labels = industry_counts.index
+counts = industry_counts.values
+plt.figure(figsize=(8,8))
+plt.pie(counts, labels=labels, autopct='%1.1f%%')
+plt.title('Distribution of Companies by Industry', fontsize = 20)
+
+plt.show()
+
 # Narrowed this data to the six biggest industries:
 
 top_industries = industry_counts.head(6).index.tolist()
@@ -182,6 +194,19 @@ plt.ylabel('Percentage of Total')
 # countries perform as a percentage of their total.
 
 country_grades = country_data.groupby('Country')['Grade'].value_counts()
+
+# For context I created a pie chart to show the percentage of all companies by country
+# of origin in Russia:
+
+y = np.array([country_counts])
+
+labels = country_counts.index
+counts = country_counts.values
+plt.figure(figsize=(8,8))
+plt.pie(counts, labels=labels, autopct='%1.1f%%')
+plt.title(None)
+
+plt.show()
 
 # This shows as a percentage of that country's companies that receive an A.  
 # This configuration also sets the "custom_order" line of code.
