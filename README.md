@@ -26,7 +26,7 @@
 ### As a late addition I created a visualization to display the total number of companies broken down by industry in a pie chart
 
 
-![Alt text](imgs/<Pie, Companies by Industry, all.png>)
+![Alt text](<imgs/Pie, Companies by Industry, all.png>)
 
 ### This was too much data to work with and communicate seamlessly so I condensed my focus to the six biggest industries.
 
